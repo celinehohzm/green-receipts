@@ -18,12 +18,11 @@ export const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-carbon flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">C</span>
-            </div>
-            <span className="font-bold text-xl bg-gradient-carbon bg-clip-text text-transparent">
-              Carbon Receipts
-            </span>
+            <img 
+              src="/src/assets/green-receipts-logo.png" 
+              alt="Green Receipts Logo" 
+              className="h-8 w-auto"
+            />
           </div>
           
           <div className="flex items-center space-x-1">

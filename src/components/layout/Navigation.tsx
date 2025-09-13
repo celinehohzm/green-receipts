@@ -32,13 +32,13 @@ export const Navigation = () => {
                 <Link
                   key={path}
                   to={path}
-                className={cn(
-                  "flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300",
-                  "hover:bg-carbon-mint hover:shadow-receipt",
-                  isActive
-                    ? "bg-carbon-green text-primary-foreground shadow-carbon"
-                    : "text-muted-foreground hover:text-foreground"
-                )}
+                  className={cn(
+                    "flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300",
+                    "hover:bg-carbon-mint hover:shadow-receipt",
+                    isActive
+                      ? "bg-gradient-carbon text-primary-foreground shadow-carbon"
+                      : "text-muted-foreground hover:text-foreground"
+                  )}
                 >
                   <Icon size={18} />
                   <span className="font-medium">{label}</span>

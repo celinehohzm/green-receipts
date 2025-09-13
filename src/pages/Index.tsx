@@ -81,45 +81,40 @@ const Index = () => {
     <div className="min-h-screen pb-8">
       <Navigation />
       
-      <main className="container mx-auto px-6 pt-6">
+      <main className="container mx-auto px-4 pt-20">
         <div className="mb-8">
-          <div className="flex items-center justify-between mb-8">
-            <h1 className="font-serif text-3xl text-foreground">All Aisles/</h1>
-            <button className="p-2 hover:bg-accent rounded-lg transition-colors">
-              <svg className="w-5 h-5 text-warm-gray" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </button>
-          </div>
-          
-          <div className="flex items-center space-x-4 mb-12">
-            <button className="px-6 py-3 bg-olive-green text-white rounded-full font-sans text-sm font-medium">
-              Default
-            </button>
-            <button className="px-6 py-3 bg-secondary text-foreground rounded-full font-sans text-sm font-medium border border-border/30 hover:bg-accent transition-colors">
-              A-Z
-            </button>
-            <button className="px-6 py-3 bg-secondary text-foreground rounded-full font-sans text-sm font-medium border border-border/30 hover:bg-accent transition-colors">
-              $ → $$
-            </button>
+          <div className="flex items-center justify-between mb-6">
+            <div>
+              <h1 className="text-4xl font-bold bg-gradient-carbon bg-clip-text text-transparent">
+                Live Carbon Feed
+              </h1>
+              <p className="text-muted-foreground mt-2">
+                Real-time tracking of AI carbon footprint
+              </p>
+            </div>
             <Button
               variant={isLive ? "secondary" : "default"}
               onClick={() => setIsLive(!isLive)}
-              className="gap-2 ml-auto"
+              className="gap-2"
             >
               <RefreshCw size={16} className={isLive ? "animate-spin" : ""} />
               {isLive ? "Live" : "Paused"}
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
-            <StreakCounter currentStreak={12} longestStreak={25} />
-            <LiveStats 
+          <div className="grid gap-6 mb-8">
+            <LiveStats
               totalEvents={events.length}
               totalCO2={totalCO2}
               avgEfficiency={avgEfficiency}
-              weeklyChange={Math.random() * 20 - 10}
+              weeklyChange={Math.random() * 20 - 10} // Mock weekly change
               isLive={isLive}
+            />
+            
+            <StreakCounter
+              currentStreak={12}
+              longestStreak={28}
+              isActive={isLive}
             />
           </div>
 

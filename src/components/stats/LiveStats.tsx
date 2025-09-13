@@ -44,31 +44,35 @@ export const LiveStats = ({
   ];
 
   return (
-    <div className="bg-card rounded-xl border border-border/30 p-6 col-span-2">
-      <h3 className="font-sans font-medium text-foreground mb-6">Live Statistics</h3>
-      
-      <div className="space-y-4">
-        <div className="flex justify-between items-center">
-          <span className="font-sans text-sm text-warm-gray">Events tracked</span>
-          <span className="font-sans font-medium text-foreground">{totalEvents}</span>
-        </div>
-        
-        <div className="flex justify-between items-center">
-          <span className="font-sans text-sm text-warm-gray">Carbon footprint</span>
-          <span className="font-sans font-medium text-olive-green">{formatCO2(totalCO2)}</span>
-        </div>
-        
-        <div className="flex justify-between items-center">
-          <span className="font-sans text-sm text-warm-gray">Efficiency score</span>
-          <span className="font-sans font-medium text-foreground">{avgEfficiency.toFixed(1)}%</span>
-        </div>
-        
-        <div className="pt-4 border-t border-border/30">
-          <div className="font-sans text-xs text-sage">
-            {isLive ? "Updated in real-time" : "Paused"}
-          </div>
-        </div>
-      </div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {stats.map((stat, index) => (
+        <Card key={stat.title} className="bg-gradient-receipt border-carbon-mint">
+          <CardHeader className="pb-2">
+            <CardTitle className="text-sm font-medium text-muted-foreground flex items-center justify-between">
+              {stat.title}
+              {isLive && index === 0 && (
+                <div className="flex items-center space-x-1">
+                  <div className="w-2 h-2 bg-carbon-success rounded-full animate-pulse-carbon" />
+                  <span className="text-xs text-carbon-success">LIVE</span>
+                </div>
+              )}
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="pt-0">
+            <div className="flex items-center space-x-2">
+              <stat.icon className={cn("w-5 h-5", stat.color)} />
+              <span className="text-2xl font-bold text-foreground">
+                {stat.value}
+              </span>
+              {stat.title === "Efficiency Score" && (
+                <span className={cn("text-sm font-medium", stat.color)}>
+                  {weeklyChange >= 0 ? '+' : ''}{weeklyChange.toFixed(1)}%
+                </span>
+              )}
+            </div>
+          </CardContent>
+        </Card>
+      ))}
     </div>
   );
 };

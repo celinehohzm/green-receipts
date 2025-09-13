@@ -16,25 +16,46 @@ export const StreakCounter = ({
   isActive = false 
 }: StreakCounterProps) => {
   return (
-    <div className={cn("bg-card rounded-xl border border-border/30 p-6 col-span-2", className)}>
-      <div className="flex items-center space-x-2 mb-6">
-        <div className="w-2 h-2 bg-olive-green rounded-full" />
-        <h3 className="font-sans font-medium text-foreground">Carbon Tracking</h3>
-      </div>
-      
-      <div className="grid grid-cols-2 gap-6">
-        <div>
-          <div className="text-3xl font-serif font-normal text-olive-green mb-1">{currentStreak}</div>
-          <div className="font-sans text-sm text-warm-gray">Current streak</div>
-          <div className="font-sans text-xs text-sage">days tracking</div>
+    <Card className={cn("bg-gradient-receipt border-carbon-mint", className)}>
+      <CardContent className="p-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-3">
+            <div className={cn(
+              "w-10 h-10 rounded-full flex items-center justify-center",
+              isActive ? "bg-gradient-carbon animate-pulse-carbon" : "bg-carbon-mint"
+            )}>
+              <Flame 
+                size={20} 
+                className={cn(
+                  isActive ? "text-primary-foreground" : "text-carbon-green"
+                )} 
+              />
+            </div>
+            <div>
+              <div className="font-bold text-lg text-foreground">
+                {currentStreak} day{currentStreak !== 1 ? 's' : ''}
+              </div>
+              <div className="text-sm text-muted-foreground">Current streak</div>
+            </div>
+          </div>
+          
+          <div className="text-right">
+            <div className="flex items-center space-x-1 text-carbon-green">
+              <TrendingUp size={16} />
+              <span className="font-semibold">{longestStreak}</span>
+            </div>
+            <div className="text-xs text-muted-foreground">Best streak</div>
+          </div>
         </div>
         
-        <div>
-          <div className="text-2xl font-serif font-normal text-foreground mb-1">{longestStreak}</div>
-          <div className="font-sans text-sm text-warm-gray">Best streak</div>
-          <div className="font-sans text-xs text-sage">personal record</div>
-        </div>
-      </div>
-    </div>
+        {currentStreak >= 7 && (
+          <div className="mt-3 p-2 bg-carbon-success/10 border border-carbon-success/20 rounded-lg">
+            <p className="text-sm text-carbon-success font-medium">
+              🌱 You're building sustainable AI habits!
+            </p>
+          </div>
+        )}
+      </CardContent>
+    </Card>
   );
 };

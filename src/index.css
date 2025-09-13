@@ -8,52 +8,47 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 41 37% 96%;
-    --foreground: 180 70% 15%;
+    --background: 46 52% 93%; /* #fff6e7 */
+    --foreground: 180 100% 15%; /* #004d3d */
 
-    --card: 41 37% 96%;
-    --card-foreground: 180 70% 15%;
+    --card: 46 52% 93%; /* #fff6e7 */
+    --card-foreground: 180 100% 15%; /* #004d3d */
 
-    --popover: 41 37% 96%;
-    --popover-foreground: 180 70% 15%;
+    --popover: 46 52% 93%; /* #fff6e7 */
+    --popover-foreground: 180 100% 15%; /* #004d3d */
 
-    --primary: 180 100% 15%;
-    --primary-foreground: 41 37% 96%;
+    --primary: 180 100% 15%; /* #004d3d */
+    --primary-foreground: 46 52% 93%; /* #fff6e7 */
 
-    --secondary: 120 30% 94%;
-    --secondary-foreground: 180 70% 15%;
+    --secondary: 73 40% 50%; /* #86b649 */
+    --secondary-foreground: 180 100% 15%; /* #004d3d */
 
-    --muted: 120 20% 95%;
-    --muted-foreground: 140 25% 45%;
+    --muted: 73 20% 85%;
+    --muted-foreground: 180 50% 35%;
 
-    --accent: 160 40% 88%;
-    --accent-foreground: 180 70% 15%;
+    --accent: 73 40% 50%; /* #86b649 */
+    --accent-foreground: 180 100% 15%; /* #004d3d */
 
     --destructive: 0 75% 55%;
-    --destructive-foreground: 41 37% 96%;
+    --destructive-foreground: 46 52% 93%; /* #fff6e7 */
 
-    --border: 120 20% 88%;
-    --input: 120 20% 88%;
-    --ring: 180 100% 15%;
+    --border: 73 20% 80%;
+    --input: 73 20% 80%;
+    --ring: 180 100% 15%; /* #004d3d */
 
     /* Custom green theme colors */
-    --carbon-green: 180 100% 15%;
-    --carbon-green-light: 78 41% 55%;
-    --carbon-emerald: 160 70% 40%;
-    --carbon-mint: 165 40% 85%;
-    --carbon-earth: 35 25% 65%;
+    --carbon-green: 180 100% 15%; /* #004d3d */
+    --carbon-green-light: 73 40% 50%; /* #86b649 */
+    --carbon-emerald: 180 100% 15%; /* #004d3d */
+    --carbon-mint: 73 40% 50%; /* #86b649 */
+    --carbon-earth: 46 52% 93%; /* #fff6e7 */
     --carbon-warning: 45 85% 55%;
-    --carbon-success: 78 41% 55%;
-
-    /* Gradients */
-    --gradient-carbon: linear-gradient(135deg, hsl(var(--carbon-green)), hsl(var(--carbon-emerald)));
-    --gradient-earth: linear-gradient(180deg, hsl(var(--carbon-mint)), hsl(var(--background)));
-    --gradient-receipt: linear-gradient(135deg, hsl(var(--card)), hsl(var(--carbon-mint)));
+    --carbon-success: 73 40% 50%; /* #86b649 */
 
     /* Shadows */
-    --shadow-carbon: 0 4px 20px -4px hsl(var(--carbon-green) / 0.25);
-    --shadow-receipt: 0 2px 12px -2px hsl(var(--carbon-green) / 0.15);
-    --shadow-glow: 0 0 30px hsl(var(--carbon-green) / 0.3);
+    --shadow-carbon: 0 4px 20px -4px hsl(var(--carbon-green) / 0.15);
+    --shadow-receipt: 0 2px 12px -2px hsl(var(--carbon-green) / 0.1);
+    --shadow-glow: 0 0 30px hsl(var(--carbon-green) / 0.2);
 
     /* Animations */
     --transition-carbon: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -79,52 +74,47 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 140 30% 8%;
-    --foreground: 120 20% 95%;
+    --background: 180 100% 8%; /* Dark version of #004d3d */
+    --foreground: 46 52% 93%; /* #fff6e7 */
 
-    --card: 140 25% 10%;
-    --card-foreground: 120 20% 95%;
+    --card: 180 100% 12%;
+    --card-foreground: 46 52% 93%; /* #fff6e7 */
 
-    --popover: 140 25% 10%;
-    --popover-foreground: 120 20% 95%;
+    --popover: 180 100% 12%;
+    --popover-foreground: 46 52% 93%; /* #fff6e7 */
 
-    --primary: 180 100% 15%;
-    --primary-foreground: 41 37% 96%;
+    --primary: 180 100% 15%; /* #004d3d */
+    --primary-foreground: 46 52% 93%; /* #fff6e7 */
 
-    --secondary: 140 20% 15%;
-    --secondary-foreground: 120 20% 90%;
+    --secondary: 73 30% 35%; /* Darker version of #86b649 */
+    --secondary-foreground: 46 52% 93%; /* #fff6e7 */
 
-    --muted: 140 15% 18%;
-    --muted-foreground: 120 15% 60%;
+    --muted: 180 20% 18%;
+    --muted-foreground: 46 30% 70%;
 
-    --accent: 140 20% 20%;
-    --accent-foreground: 120 20% 90%;
+    --accent: 73 30% 35%; /* Darker version of #86b649 */
+    --accent-foreground: 46 52% 93%; /* #fff6e7 */
 
     --destructive: 0 65% 45%;
-    --destructive-foreground: 120 20% 95%;
+    --destructive-foreground: 46 52% 93%; /* #fff6e7 */
 
-    --border: 140 15% 18%;
-    --input: 140 15% 18%;
-    --ring: 180 100% 15%;
+    --border: 180 15% 20%;
+    --input: 180 15% 20%;
+    --ring: 73 40% 50%; /* #86b649 */
 
     /* Dark mode green colors */
-    --carbon-green: 180 100% 15%;
-    --carbon-green-light: 78 41% 55%;
-    --carbon-emerald: 160 65% 50%;
-    --carbon-mint: 165 30% 25%;
-    --carbon-earth: 35 20% 45%;
+    --carbon-green: 180 100% 15%; /* #004d3d */
+    --carbon-green-light: 73 40% 50%; /* #86b649 */
+    --carbon-emerald: 180 100% 15%; /* #004d3d */
+    --carbon-mint: 73 40% 50%; /* #86b649 */
+    --carbon-earth: 46 52% 93%; /* #fff6e7 */
     --carbon-warning: 45 80% 60%;
-    --carbon-success: 78 41% 55%;
-
-    /* Dark gradients */
-    --gradient-carbon: linear-gradient(135deg, hsl(var(--carbon-green)), hsl(var(--carbon-emerald)));
-    --gradient-earth: linear-gradient(180deg, hsl(var(--carbon-mint)), hsl(var(--background)));
-    --gradient-receipt: linear-gradient(135deg, hsl(var(--card)), hsl(var(--carbon-mint)));
+    --carbon-success: 73 40% 50%; /* #86b649 */
 
     /* Dark shadows */
-    --shadow-carbon: 0 4px 20px -4px hsl(var(--carbon-green) / 0.4);
-    --shadow-receipt: 0 2px 12px -2px hsl(var(--carbon-green) / 0.25);
-    --shadow-glow: 0 0 30px hsl(var(--carbon-green) / 0.5);
+    --shadow-carbon: 0 4px 20px -4px hsl(var(--carbon-green) / 0.3);
+    --shadow-receipt: 0 2px 12px -2px hsl(var(--carbon-green) / 0.2);
+    --shadow-glow: 0 0 30px hsl(var(--carbon-green) / 0.4);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -143,7 +133,6 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    background: var(--gradient-earth);
     min-height: 100vh;
   }
 

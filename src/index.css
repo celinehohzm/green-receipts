@@ -8,52 +8,52 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 120 20% 98%;
-    --foreground: 140 60% 10%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 140 60% 10%;
+    --card-foreground: 0 0% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 140 60% 10%;
+    --popover-foreground: 0 0% 9%;
 
-    --primary: 145 65% 35%;
+    --primary: 145 65% 45%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 120 30% 94%;
-    --secondary-foreground: 140 60% 15%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
 
-    --muted: 120 20% 95%;
-    --muted-foreground: 140 25% 45%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 160 40% 88%;
-    --accent-foreground: 140 60% 15%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 9%;
 
-    --destructive: 0 75% 55%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 120 20% 88%;
-    --input: 120 20% 88%;
-    --ring: 145 65% 35%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 145 65% 45%;
 
-    /* Custom carbon theme colors */
-    --carbon-green: 145 65% 35%;
-    --carbon-green-light: 145 45% 55%;
-    --carbon-emerald: 160 70% 40%;
-    --carbon-mint: 165 40% 85%;
-    --carbon-earth: 35 25% 65%;
-    --carbon-warning: 45 85% 55%;
-    --carbon-success: 145 70% 45%;
+    /* Clean modern colors */
+    --carbon-green: 145 65% 45%;
+    --carbon-green-light: 145 45% 65%;
+    --carbon-emerald: 160 70% 50%;
+    --carbon-mint: 165 40% 95%;
+    --carbon-earth: 35 25% 75%;
+    --carbon-warning: 45 85% 65%;
+    --carbon-success: 145 70% 55%;
 
-    /* Gradients */
+    /* Clean gradients */
     --gradient-carbon: linear-gradient(135deg, hsl(var(--carbon-green)), hsl(var(--carbon-emerald)));
-    --gradient-earth: linear-gradient(180deg, hsl(var(--carbon-mint)), hsl(var(--background)));
+    --gradient-earth: linear-gradient(180deg, hsl(var(--background)), hsl(var(--carbon-mint)));
     --gradient-receipt: linear-gradient(135deg, hsl(var(--card)), hsl(var(--carbon-mint)));
 
-    /* Shadows */
-    --shadow-carbon: 0 4px 20px -4px hsl(var(--carbon-green) / 0.25);
-    --shadow-receipt: 0 2px 12px -2px hsl(var(--carbon-green) / 0.15);
-    --shadow-glow: 0 0 30px hsl(var(--carbon-green) / 0.3);
+    /* Clean shadows */
+    --shadow-carbon: 0 2px 10px -2px hsl(var(--carbon-green) / 0.1);
+    --shadow-receipt: 0 1px 6px -1px hsl(0 0% 0% / 0.1);
+    --shadow-glow: 0 0 20px hsl(var(--carbon-green) / 0.2);
 
     /* Animations */
     --transition-carbon: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -143,7 +143,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    background: var(--gradient-earth);
+    background: hsl(var(--background));
     min-height: 100vh;
   }
 

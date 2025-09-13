@@ -47,6 +47,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        carbon: {
+          green: "hsl(var(--carbon-green))",
+          "green-light": "hsl(var(--carbon-green-light))",
+          emerald: "hsl(var(--carbon-emerald))",
+          mint: "hsl(var(--carbon-mint))",
+          earth: "hsl(var(--carbon-earth))",
+          warning: "hsl(var(--carbon-warning))",
+          success: "hsl(var(--carbon-success))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -62,6 +71,19 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        "gradient-carbon": "var(--gradient-carbon)",
+        "gradient-earth": "var(--gradient-earth)",
+        "gradient-receipt": "var(--gradient-receipt)",
+      },
+      boxShadow: {
+        carbon: "var(--shadow-carbon)",
+        receipt: "var(--shadow-receipt)",
+        glow: "var(--shadow-glow)",
+      },
+      transitionProperty: {
+        carbon: "var(--transition-carbon)",
       },
       keyframes: {
         "accordion-down": {

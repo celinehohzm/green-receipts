@@ -9,57 +9,55 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 9%;
+    --foreground: 0 0% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 9%;
+    --card-foreground: 0 0% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 9%;
+    --popover-foreground: 0 0% 15%;
 
-    --primary: 145 65% 45%;
+    --primary: 82 39% 30%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 9%;
+    --secondary: 0 0% 98%;
+    --secondary-foreground: 0 0% 15%;
 
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
     --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 9%;
+    --accent-foreground: 0 0% 15%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 145 65% 45%;
+    --input: 0 0% 96%;
+    --ring: 82 39% 30%;
 
-    /* Clean modern colors */
-    --carbon-green: 145 65% 45%;
-    --carbon-green-light: 145 45% 65%;
-    --carbon-emerald: 160 70% 50%;
-    --carbon-mint: 165 40% 95%;
-    --carbon-earth: 35 25% 75%;
-    --carbon-warning: 45 85% 65%;
-    --carbon-success: 145 70% 55%;
+    /* Sophisticated colors inspired by the reference */
+    --olive-green: 82 39% 30%;
+    --olive-light: 82 25% 45%;
+    --sage: 82 15% 65%;
+    --cream: 45 20% 96%;
+    --warm-gray: 0 0% 45%;
+    --light-gray: 0 0% 85%;
+    --soft-green: 82 20% 85%;
 
-    /* Clean gradients */
-    --gradient-carbon: linear-gradient(135deg, hsl(var(--carbon-green)), hsl(var(--carbon-emerald)));
-    --gradient-earth: linear-gradient(180deg, hsl(var(--background)), hsl(var(--carbon-mint)));
-    --gradient-receipt: linear-gradient(135deg, hsl(var(--card)), hsl(var(--carbon-mint)));
+    /* Minimal gradients */
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--cream)));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(var(--soft-green)));
 
-    /* Clean shadows */
-    --shadow-carbon: 0 2px 10px -2px hsl(var(--carbon-green) / 0.1);
-    --shadow-receipt: 0 1px 6px -1px hsl(0 0% 0% / 0.1);
-    --shadow-glow: 0 0 20px hsl(var(--carbon-green) / 0.2);
+    /* Subtle shadows */
+    --shadow-light: 0 1px 3px hsl(0 0% 0% / 0.1);
+    --shadow-medium: 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+    --shadow-card: 0 1px 3px hsl(0 0% 0% / 0.12), 0 1px 2px hsl(0 0% 0% / 0.24);
 
-    /* Animations */
-    --transition-carbon: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --pulse-duration: 2s;
+    /* Smooth transitions */
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 

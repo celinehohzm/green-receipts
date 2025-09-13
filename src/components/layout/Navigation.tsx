@@ -1,51 +1,51 @@
 import { Link, useLocation } from "react-router-dom";
-import { cn } from "@/lib/utils";
-import { Activity, BarChart3, Settings, Trophy, Zap } from "lucide-react";
-
-const navItems = [
-  { path: "/", label: "Live Feed", icon: Activity },
-  { path: "/connect", label: "Connect", icon: Zap },
-  { path: "/reports", label: "Reports", icon: BarChart3 },
-  { path: "/leaderboard", label: "Leaderboard", icon: Trophy },
-  { path: "/settings", label: "Settings", icon: Settings },
-];
+import { Menu, ShoppingBag } from "lucide-react";
 
 export const Navigation = () => {
   const location = useLocation();
 
+  const navItems = [
+    { path: "/", label: "Live Feed" },
+    { path: "/connect", label: "Connect" },
+    { path: "/reports", label: "Reports" },
+    { path: "/leaderboard", label: "Leaderboard" },
+    { path: "/settings", label: "Settings" },
+  ];
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-lg border-b border-carbon-mint">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-carbon flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">C</span>
-            </div>
-            <span className="font-bold text-xl bg-gradient-carbon bg-clip-text text-transparent">
-              Carbon Receipts
-            </span>
+    <nav className="bg-background border-b border-border/50">
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between h-20">
+          <div className="flex items-center">
+            <button className="p-2 hover:bg-accent rounded-lg transition-colors md:hidden">
+              <Menu className="h-5 w-5" />
+            </button>
           </div>
           
-          <div className="flex items-center space-x-1">
-            {navItems.map(({ path, label, icon: Icon }) => {
-              const isActive = location.pathname === path;
-              return (
-                <Link
-                  key={path}
-                  to={path}
-                  className={cn(
-                    "flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300",
-                    "hover:bg-carbon-mint hover:shadow-receipt",
-                    isActive
-                      ? "bg-gradient-carbon text-primary-foreground shadow-carbon"
-                      : "text-muted-foreground hover:text-foreground"
-                  )}
-                >
-                  <Icon size={18} />
-                  <span className="font-medium">{label}</span>
-                </Link>
-              );
-            })}
+          <Link 
+            to="/" 
+            className="font-serif text-2xl font-normal text-olive-green hover:text-olive-light transition-colors"
+          >
+            Carbon Receipts
+          </Link>
+          
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`font-sans text-sm transition-colors ${
+                  location.pathname === item.path
+                    ? "text-foreground font-medium"
+                    : "text-warm-gray hover:text-foreground"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+            <button className="p-2 hover:bg-accent rounded-lg transition-colors">
+              <ShoppingBag className="h-5 w-5 text-warm-gray" />
+            </button>
           </div>
         </div>
       </div>

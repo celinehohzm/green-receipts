@@ -109,7 +109,7 @@ export default {
       },
       },
       fontFamily: {
-        'times': ['Times', 'Times New Roman', 'serif'],
+        'formal': ['EB Garamond', 'Georgia', 'serif'],
       },
   },
   plugins: [require("tailwindcss-animate")],

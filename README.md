@@ -119,24 +119,6 @@ Green Receipt helps users:
 - **Learn** about climate action and environmental responsibility
 - **Compete** in a positive way toward greener habits
 
-## 🤝 Contributing
-
-We welcome contributions to make Green Receipt even better! Please feel free to:
-- Report bugs and issues
-- Suggest new features
-- Submit pull requests
-- Improve documentation
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Support
-
-For support, questions, or feedback:
-- Create an issue in this repository
-- Use the in-app Gemini assistant for environmental questions
-- Contact our team through the settings page
 
 ---
 

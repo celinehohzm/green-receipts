@@ -18,7 +18,7 @@ export const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-2">
-            <h1 className="text-xl font-bold font-formal text-[#004d3d]">WattWise</h1>
+            <h1 className="text-xl font-bold font-formal text-[#004d3d]">Green Receipts</h1>
           </div>
           
           <div className="flex items-center space-x-1">

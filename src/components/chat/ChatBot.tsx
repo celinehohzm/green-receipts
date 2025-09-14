@@ -40,14 +40,15 @@ export const ChatBot = () => {
     setIsLoading(true);
 
     try {
-      // Using provided Gemini API key
-      const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyC34_ZcgqGzZ6EVjg-vv6oZ7uVy-Yfg3tg', {
+      // Using provided Gemini API key with updated v1 endpoint and model
+      const response = await fetch('https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=AIzaSyC34_ZcgqGzZ6EVjg-vv6oZ7uVy-Yfg3tg', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           contents: [{
+            role: 'user',
             parts: [{
               text: `You are an environmental educator specializing in carbon footprints and sustainability. Please provide helpful, accurate information about: ${inputValue}. Keep responses concise and actionable.`
             }]

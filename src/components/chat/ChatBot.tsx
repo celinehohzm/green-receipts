@@ -40,8 +40,8 @@ export const ChatBot = () => {
     setIsLoading(true);
 
     try {
-      // Replace 'your-api-key' with actual Gemini API key
-      const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=your-api-key', {
+      // Using provided Gemini API key
+      const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyC34_ZcgqGzZ6EVjg-vv6oZ7uVy-Yfg3tg', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

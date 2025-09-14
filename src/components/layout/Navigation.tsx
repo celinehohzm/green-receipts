@@ -18,11 +18,7 @@ export const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-2">
-            <img 
-              src="/src/assets/green-receipts-logo.png" 
-              alt="Green Receipts Logo" 
-              className="h-8 w-auto"
-            />
+            <h1 className="text-xl font-semibold text-foreground">Green Receipt</h1>
           </div>
           
           <div className="flex items-center space-x-1">

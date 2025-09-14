@@ -109,7 +109,7 @@ export const ChatBot = () => {
       {isOpen && (
         <Card className="fixed bottom-24 right-6 z-50 w-80 h-96 shadow-xl">
           <CardHeader className="p-4 bg-primary text-primary-foreground">
-            <CardTitle className="text-lg">Carbon Footprint Assistant</CardTitle>
+            <CardTitle className="text-lg">Gemini Carbon Footprint Assistant</CardTitle>
           </CardHeader>
           <CardContent className="p-0 flex flex-col h-80">
             {/* Messages Area */}

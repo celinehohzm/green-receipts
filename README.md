@@ -1,10 +1,10 @@
-# Green Receipt 🌱
+# WattWise 🌱
 
 A comprehensive AI carbon footprint tracking application that helps users monitor, understand, and reduce their environmental impact through intelligent analytics and educational resources.
 
 ## 📋 Overview
 
-Green Receipt is a modern web application designed to track and analyze AI usage carbon footprint in real-time. With an intuitive interface and powerful analytics, users can make informed decisions about their environmental impact while learning about sustainability through our integrated Gemini-powered educational assistant.
+WattWise is a modern web application designed to track and analyze AI usage carbon footprint in real-time. With an intuitive interface and powerful analytics, users can make informed decisions about their environmental impact while learning about sustainability through our integrated Gemini-powered educational assistant.
 
 ## ✨ Features
 
@@ -55,7 +55,7 @@ Green Receipt is a modern web application designed to track and analyze AI usage
 
 ## 🎨 Design System
 
-Green Receipt features a carefully crafted design system with:
+WattWise features a carefully crafted design system with:
 - **Primary Colors**: Dark Green (#004d3d), Light Green (#86b649)
 - **Background**: Cream White (#fff6e7)
 - **Typography**: EB Garamond serif font for formal elements
@@ -112,7 +112,7 @@ npm run dev
 
 ## 🌍 Environmental Impact
 
-Green Receipt helps users:
+WattWise helps users:
 - **Understand** their AI usage carbon footprint
 - **Reduce** environmental impact through informed decisions
 - **Track** progress toward sustainability goals
@@ -124,4 +124,4 @@ Green Receipt helps users:
 
 **Made with 💚 for a sustainable future**
 
-*Green Receipt - Track. Learn. Reduce. Repeat.*
+*WattWise - Track. Learn. Reduce. Repeat.*
